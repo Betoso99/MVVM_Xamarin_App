@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:MVVM_Login="clr-namespace:MVVM_Login.Views"
+            x:Class="MVVM_Login.Views.HomePage"
+            BarBackgroundColor="Yellow"
+            BarTextColor="Black">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Home" IconImageSource="House.png"/>
+    <ContentPage Title="Delivery" IconImageSource="Location.png">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Grid.Row="0" Grid.Column="0">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="{Binding BarAndHotelsOption.Image}"/>
+                    <Label Text="{Binding BarAndHotelsOption.Title}" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+                    <Label Text="{Binding BarAndHotelsOption.Amount}" HorizontalOptions="CenterAndExpand" FontSize="Small"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="0" Grid.Column="1">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="{Binding CoffeAndTe.Image}"/>
+                    <Label Text="{Binding CoffeAndTe.Title}" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="{Binding CoffeAndTe.Amount}" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="1" Grid.Column="0">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="{Binding Dessert.Image}"/>
+                    <Label Text="{Binding Dessert.Title}" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="{Binding Dessert.Amount}" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="Yellow">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="{Binding FastFood.Image}"/>
+                    <Label Text="{Binding FastFood.Title}" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="{Binding FastFood.Amount}" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="2" Grid.Column="0">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="{Binding Pizza.Image}"/>
+                    <Label Text="{Binding Pizza.Title}" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="{Binding Pizza.Amount}" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="2" Grid.Column="1">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="{Binding Restaurant.Image}"/>
+                    <Label Text="{Binding Restaurant.Title}" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="{Binding Restaurant.Amount}" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage>
+    <ContentPage Title="Bookmarks" IconImageSource="Bookmark.png"/>
+    <ContentPage Title="Top Foods" IconImageSource="Trophy.png"/>
+    <ContentPage Title="Porfile" IconImageSource="Porfile.png"/>
+</TabbedPage>
